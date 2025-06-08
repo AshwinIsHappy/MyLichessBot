@@ -88,16 +88,16 @@ engine:                            # Engine settings.
   homemade_options:
 #   Hash: 256
 
-  uci_options:                     # Arbitrary UCI options passed to the engine.
+  uci_options:                    # Arbitrary UCI options passed to the engine.
     Move Overhead: 200            # Increase if your bot flags games too often.
-    Threads: 4                    # Max CPU threads the engine can use.
-    Hash: 4096                     # Max memory (in megabytes) the engine can allocate.
+    Threads: 8                    # Max CPU threads the engine can use.
+    Hash: 1024                    # Max memory (in megabytes) the engine can allocate.
     #SyzygyPath: "./engines/syzygy/"       # Paths to Syzygy endgame tablebases that the engine reads.
     UCI_ShowWDL: true             # Show the chance of the engine winning.
-#    go_commands:                   # Additional options to pass to the UCI go command.
-#     nodes: 1                     # Search so many nodes only.
-#     depth: 5                     # Search depth ply only.
-#      movetime: 100               # Integer. Search exactly movetime milliseconds.
+    go_commands:                  # Additional options to pass to the UCI go command.
+     nodes: 3000000000            # Search so many nodes only.
+     depth: 40                    # Search depth ply only.
+     movetime: 200                # Integer. Search exactly movetime milliseconds.
 
 # xboard_options:                  # Arbitrary XBoard options passed to the engine.
 #   cores: "4"
@@ -127,7 +127,7 @@ correspondence:
   ponder: false                    # Ponder in correspondence games the bot is connected to.
   
 challenge:                         # Incoming challenges.
-  concurrency: 5                   # Number of games to play simultaneously.
+  concurrency: 3                   # Number of games to play simultaneously.
   sort_by: "best"                  # Possible values: "best" and "first".
   accept_bot: true                 # Accepts challenges coming from other bots.
   only_bot: false                  # Accept challenges by bots only.
@@ -212,7 +212,6 @@ matchmaking:
     - Nikitosikbot_v2
     - TheMatrix2025
     - ToromBot
-
 # overrides:                       # List of overrides for the matchmaking specifications above. When a challenge is created, either the default specification above or one of the overrides will be randomly chosen.
 #   bullet_only_horde:             # Name of the override. Can be anything as long as each override has a unique name ("bullet_only_horde" and "easy_chess960" in these examples).
 #     challenge_variant: "horde"   # List of options to override. Only the options mentioned will change when making the challenge. The rest will follow the default matchmaking options above.

@@ -11,7 +11,7 @@ on:
     paths:
       - "lichess-bot.py"
   schedule:
-    - cron: "1 */4 * * *"
+    - cron: "1 */5 * * *"
 
 concurrency:
   group: ${{ github.ref }}

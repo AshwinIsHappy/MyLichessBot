@@ -97,7 +97,7 @@ engine:                            # Engine settings.
     go_commands:                  # Additional options to pass to the UCI go command.
      nodes: 3000000000            # Search so many nodes only.
      depth: 40                    # Search depth ply only.
-     movetime: 250                # Integer. Search exactly movetime milliseconds.
+     movetime: 150                # Integer. Search exactly movetime milliseconds.
 
 # xboard_options:                  # Arbitrary XBoard options passed to the engine.
 #   cores: "4"

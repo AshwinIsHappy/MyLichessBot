@@ -94,10 +94,10 @@ engine:                            # Engine settings.
     Hash: 1024                    # Max memory (in megabytes) the engine can allocate.
     #SyzygyPath: "./engines/syzygy/"       # Paths to Syzygy endgame tablebases that the engine reads.
     UCI_ShowWDL: true             # Show the chance of the engine winning.
-#    go_commands:                  # Additional options to pass to the UCI go command.
-#    nodes: 3000000000            # Search so many nodes only.
-#    depth: 35                    # Search depth ply only.
-#    movetime: 150                # Integer. Search exactly movetime milliseconds.
+    go_commands:                  # Additional options to pass to the UCI go command.
+    nodes: 3000000000            # Search so many nodes only.
+    depth: 35                    # Search depth ply only.
+    movetime: 150                # Integer. Search exactly movetime milliseconds.
 
 # xboard_options:                  # Arbitrary XBoard options passed to the engine.
 #   cores: "4"
@@ -203,7 +203,7 @@ matchmaking:
 #    - 2
   opponent_min_rating: 3000        # Opponents rating should be above this value (600 is the minimum rating in lichess).
   opponent_max_rating: 4000        # Opponents rating should be below this value (4000 is the maximum rating in lichess).
-  opponent_rating_difference: 0    # The maximum difference in rating between the bot's rating and opponent's rating.
+  opponent_rating_difference: 900  # The maximum difference in rating between the bot's rating and opponent's rating.
   rating_preference: "high"        # One of "none", "high", "low".
   opponent_allow_tos_violation: false # Set to 'true' to allow challenging bots that violated the Lichess Terms of Service.
   challenge_mode: "casual"         # Set it to the mode in which challenges are sent. Possible options are 'casual', 'rated' and 'random'.
